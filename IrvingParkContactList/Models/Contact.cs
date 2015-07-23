@@ -7,7 +7,8 @@ namespace IrvingParkContactList.Models
         public int Id { get; set; }
 
         public string Name { get; set; }
-
+        
+        [Required]
         public CityBlock Block { get; set; }
         
         [DataType(DataType.EmailAddress)]
