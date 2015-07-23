@@ -4,14 +4,15 @@ using IrvingParkContactList.Models;
 
 namespace IrvingParkContactList.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<IrvingParkContactList.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             this.AutomaticMigrationsEnabled = false;
+            this.ContextKey = "IrvingParkContactList.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(ApplicationDbContext context)
+        protected override void Seed(IrvingParkContactList.Models.ApplicationDbContext context)
         {
             context.CityBlocks.AddOrUpdate(
                 new CityBlock { Number = 3600, Street = "Drake Ave" },
